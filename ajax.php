@@ -1,6 +1,6 @@
 <?php
 // WordBot
-require_once("includes/glob.php");
+require_once("../glob.php");
 
 $page = $core->clean($_GET['page']);
 

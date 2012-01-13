@@ -1,6 +1,6 @@
 <?php
 // WordBot
-require_once("includes/glob.php");
+require_once("../glob.php");
 
 
 $page = $core->clean($_GET['page']);
@@ -19,5 +19,5 @@ if($page)  // Check for an input
 include($thepage); // Main Content
 
 include ("includes/footer.php"); // HTML Stuff
-
+ #
 ?>
