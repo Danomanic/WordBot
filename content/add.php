@@ -30,6 +30,6 @@ if ($learnt) {
 	echo "<p>I learnt these words:</p>";
 	echo "<p>" . $learnt_words . "</p>"; 
 } else {
-	echo "Sadly I didn't learn any new words from your twitter!";
+	echo "<p>Sadly I didn't learn any new words from your twitter!</p>";
 }
 ?>

@@ -1,6 +1,6 @@
 <?php
 // WordBot
-require_once("../glob.php");
+require_once("../../dev.php"); // REMEMBER TO CHANGE THE DATABASE!
 
 
 $page = $core->clean($_GET['page']);
@@ -19,5 +19,5 @@ if($page)  // Check for an input
 include($thepage); // Main Content
 
 include ("includes/footer.php"); // HTML Stuff
- #
+
 ?>

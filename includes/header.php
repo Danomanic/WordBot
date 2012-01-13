@@ -53,7 +53,7 @@
 </script>
 </head>
 <body>
-<div id="logo">Word<strong>Bot</strong>
+<div id="logo"><?php if($params['site']['dev']) { echo "DEV - "; } ?> Word<strong>Bot</strong>
 <div id="known">
 	<?php 
 		$result = mysql_query("SELECT * FROM words WHERE status = 1");
