@@ -47,6 +47,11 @@
 			var url = $('#word').text();
 			$('#container').empty();
 			$('#container').html('<iframe src="http://translate.google.com/translate_tts?tl=en&q=' + url + '" width="0" height="0"></iframe>');
+			$('#mouth').show();
+			$('#mouth').slideDown();
+			$('#mouth').slideUp();
+			$('#mouth').slideDown();
+			$('#mouth').slideUp();
 		});
 	});
 	
