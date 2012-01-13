@@ -1,6 +1,6 @@
 <?php
 // WordBot
-require_once("../../dev.php"); // REMEMBER TO CHANGE THE DATABASE!
+require_once("../glob.php"); // REMEMBER TO CHANGE THE DATABASE!
 
 
 $page = $core->clean($_GET['page']);
