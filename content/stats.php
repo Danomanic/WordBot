@@ -14,7 +14,7 @@ while($row = mysql_fetch_array($result))
 ?>
 <br style="clear:both" />
 <br style="clear:both" />
-<h2>Highest rated</h2>
+<h2>Dictionary Completion</h2>
 <?php
 $result = mysql_query("SELECT * FROM words WHERE status = 1 AND rating >= -10 ORDER BY rating DESC LIMIT 0,10");
 while($row = mysql_fetch_array($result))
