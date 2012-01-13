@@ -14,7 +14,6 @@ if(isset($id))
 }
 
 $rs = mysql_query("SELECT * FROM words WHERE status = 1 AND rating >= -1 AND rating <= 1 ORDER BY RAND() LIMIT 1");
-
 if(!$rs){
     echo 'Fire! Fire!';
 	exit;
@@ -33,20 +32,13 @@ $r = mysql_fetch_assoc($rs);
 		<a class="good" href="test?a=0&id=<?php echo $r['id'];?>&w=<?php echo $r['word'];?>">Yes</a> 
 		<a class="report" href="test?a=1&id=<?php echo $r['id'];?>&w=<?php echo $r['word'];?>">No </a>
 	</div>
-
 	
 	<br style="clear:both" />
-	<br style="clear:both" />
-	<div id="tts">
-	Text to speech: <div id='container'></div>
-	(Doesn't work with Chrome atm)
-	</div>
-	<script type='text/javascript'>
-	 var cnt = document.getElementById('container');
-	 var src = 'wmvplayer.xaml';
-	 var cfg = {height:'20',width:'200',duration:'30',file:'http://translate.google.com/translate_tts?tl=en&q=<?php echo $r['word']; ?>',overstretch:'true',usefullscreen:'false'};
-	 var ply = new jeroenwijering.Player(cnt,src,cfg);
-	</script>
+	
+	<?php
+	$string = $r['word'];
+	include('modules/tts.php');
+	?>
 
 	<br style="clear:both" />
 	<a target="_blank" href="http://www.google.co.uk/search?ix=hca&sourceid=chrome&ie=UTF-8&q=define%3A+<? echo $r['word']; ?>">Ask Google</a>

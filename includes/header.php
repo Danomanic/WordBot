@@ -10,10 +10,7 @@
 <script>
 
 	$(function() {
-		jQuery(window).load(function() {
-			jQuery('#loading-image').hide();
-		});
-		
+	
 		var start = 100;
 		$('#words-more').click(function() {
 			$.get('ajax.php?page=words&start=' + start, function(data) {
@@ -45,6 +42,12 @@
 			});
 
 		});
+		
+		$('#player').click(function() {
+			var url = $('#word').text();
+			$('#container').empty();
+			$('#container').html('<iframe src="http://translate.google.com/translate_tts?tl=en&q=' + url + '" width="0" height="0"></iframe>');
+		});
 	});
 	
 </script>
@@ -64,6 +67,3 @@
 <div id="links"><a href="./">Home</a> <a href="words">Words</a> <a href="users">Users</a> <a href="stats">Statistics</a> <a href="search">Search</a> <a href="fun">Fun</a> <a href="test">Teach</a> <a href="about">About</a>
 </div>
 <div id="content">
-<div id="loading-image">
-	<img src="loading.gif" alt="Loading..." />
-</div>

@@ -1,7 +1,7 @@
 <?php
 $action = $core->clean($_GET['a']);
 $id = $core->clean($_GET['id']);
-$word = $twitter->filter($_GET['w']);
+$word = $core->filter($_GET['w']);
 
 if($action == "good") { 
 	mysql_query("UPDATE words SET rating = rating + 1 WHERE id = " . $id . "");

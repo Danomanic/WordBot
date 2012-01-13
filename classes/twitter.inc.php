@@ -8,8 +8,6 @@
 		public function __construct() {
 
 			global $params;
-			$this->connection = mysql_connect( $params['db']['hostname'], $params['db']['username'], $params['db']['password'] );
-			mysql_select_db( $params['db']['database'] );
 
 		}
 		
@@ -19,12 +17,7 @@
 
 			return $xml;
 		}
-		
-		public function filter($word) {
-			$word = preg_replace("/[^a-zA-Z'\s]/", "", $word);
 
-			return $word;
-		}
 		 
 		private function limit($user,$summary) {
 			$limit = 80;

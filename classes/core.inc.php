@@ -283,6 +283,12 @@
 			return $rating;
 		}
 		
+		// Not required - Updated RegEx @add.php 12
+		public function filter($word) {
+			$word = preg_replace("/[^a-zA-Z'\s]/", "", $word);
+
+			return $word;
+		}
 
 	}
 
