@@ -436,3 +436,20 @@ h3 {
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
+
+#robot {
+	width: 606px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+	margin-top: -6px;
+}
+
+#console {
+	background-color: #000;
+	width: 300px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+}
